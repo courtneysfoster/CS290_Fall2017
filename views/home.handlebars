@@ -1,0 +1,22 @@
+<!--Home Handlebar-->
+	<h1 id="hLable">this is a lable</h1>
+	<fieldset id="field1">
+		<legend>Request Data</legend>
+		<form method="GET" id="form1">
+			<p> 
+				<input type="radio" name="requestType" value="Post" id="r1">Submit form via GET Request</input>
+				<input type="radio" name="requestType" value="GET" id="r2">Submit form via POST Request</input>
+			</p>
+			<div>Data: <input type="data" name="Input" id="txtData"></input> Value: <input type="data" name="Input" id="txtValue"></input> </div>
+			<p><button type="submit" id="btnSubmit1">Get weather</button></p>
+		</form>
+	</fieldset>
+	
+	<fieldset id="field2">
+		<h1>Result of post/get:</h1>
+		<ul>
+		  {{#each datalist}}
+			<li>{{this.name}}: {{this.value}}
+		  {{/each}}
+		</ul>
+	</fieldset>
